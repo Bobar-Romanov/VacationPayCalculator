@@ -1,22 +1,27 @@
 package com.neoflex.Calculator.models;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 
+@Getter
+@Setter
 public class VacantionPay {
-    private int salary;
+    private double salary;
     private int days;
     private LocalDate startDate;
-    private int validation;
-    private int port;
+    private double validation;
 
-    public VacantionPay(int salary, int days, int validation){
+
+    public VacantionPay(double salary, int days, double validation){
         this.salary = salary;
         this.days = days;
         this.validation = validation;
     }
 
-    public VacantionPay(int salary, int days, LocalDate startDate, int validation) {
+    public VacantionPay(double salary, int days, LocalDate startDate, double validation) {
         this.salary = salary;
         this.days = days;
         this.startDate = startDate;
@@ -26,8 +31,5 @@ public class VacantionPay {
     public VacantionPay() {
     }
 
-    public void setPort(int port) {
-        this.port = port;
-    }
 }
 
